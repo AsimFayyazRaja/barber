@@ -1,1 +1,3 @@
 models/ffhq.pt filter=lfs diff=lfs merge=lfs -text
+pretrained_models/ffhq filter=lfs diff=lfs merge=lfs -text
+pretrained_models/ffhq.pt filter=lfs diff=lfs merge=lfs -text
