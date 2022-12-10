@@ -104,4 +104,5 @@ def blend_imgs(names=['90.png','15.png','117.png'],fs=250,wsteps=1100,align_step
         align.align_images(im_path1, im_path3, sign=arguments.sign, align_more_region=False, smooth=arguments.smooth, save_intermediate=False)
 
     blend = Blending(arguments)
-    blend.blend_images(im_path1, im_path2, im_path3, sign=arguments.sign)
+    out_path=blend.blend_images(im_path1, im_path2, im_path3, sign=arguments.sign)
+    return out_path
