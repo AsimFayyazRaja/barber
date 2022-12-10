@@ -65,10 +65,11 @@ def get_output():
     except:
         pass
     
-    resp=test.blend_imgs(names,fs,w_steps,align_steps1,align_steps2,blend_steps)
-    resp=jsonify(resp)
-    resp.headers.add('Access-Control-Allow-Origin', '*')
-    return resp
+    resp=test.blend_imgs(names,fs,w_steps,align_steps1,align_steps2,blend_steps) # get output image
+    return send_file(resp, mimetype='image/gif')
+    #resp=jsonify(resp)
+    #resp.headers.add('Access-Control-Allow-Origin', '*')
+    #return resp
 
 
 if __name__ == '__main__':
