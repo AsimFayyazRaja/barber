@@ -149,6 +149,7 @@ class Blending(nn.Module):
 
         save_im.save(image_path)
         save_im.save(output_image_path)
+        print("output_image_path: ", output_image_path)
         np.savez(latent_path, latent_in=latent_in.detach().cpu().numpy(), latent_F=latent_F.detach().cpu().numpy())
 
 
